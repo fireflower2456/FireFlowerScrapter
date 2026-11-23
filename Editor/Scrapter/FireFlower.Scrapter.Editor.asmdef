@@ -1,0 +1,23 @@
+{
+    "name": "FireFlower.Scrapter.Editor",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Scrap",
+        "FireFlower.Gameplay",
+        "FireFlower.Feedback",
+        "FireFlower.Core",
+        "FireFlower.Stat",
+        "FireFlower.Catalog",
+        "FireFlower.Catalog.Editor",
+        "MackySoft.SerializeReferenceExtensions",
+        "NaughtyAttributes.Core",
+        "NaughtyAttributes.Editor",
+        "Unity.Localization",
+        "Unity.Localization.Editor",
+        "Unity.TextMeshPro"
+    ],
+    "autoReferenced": true,
+    "includePlatforms": [
+        "Editor"
+    ]
+}

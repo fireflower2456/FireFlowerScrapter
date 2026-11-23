@@ -1,0 +1,11 @@
+{
+    "name": "FireFlower.Core",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Stat",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
+    ],
+    "autoReferenced": true
+}

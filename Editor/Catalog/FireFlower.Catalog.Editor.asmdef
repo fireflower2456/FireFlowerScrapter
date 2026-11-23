@@ -1,0 +1,15 @@
+{
+    "name": "FireFlower.Catalog.Editor",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Catalog",
+        "NaughtyAttributes.Core",
+        "NaughtyAttributes.Editor",
+        "Unity.Localization",
+        "Unity.Localization.Editor"
+    ],
+    "autoReferenced": true,
+    "includePlatforms": [
+        "Editor"
+    ]
+}

@@ -1,0 +1,176 @@
+/* Unity dark inspector tone · angular behavior-tree-like nodes · blocks interlock with no gaps */
+.effect-editor { flex-grow: 1; background-color: #282828; color: #c4c4c4; }
+
+.top-bar { height: 26px; flex-direction: row; align-items: center; padding-left: 6px; padding-right: 4px; background-color: #3c3c3c; border-bottom-width: 1px; border-bottom-color: #191919; }
+.item-field-host { width: 260px; }
+.item-object-field { margin: 0; }
+.top-bar-spacer { flex-grow: 1; }
+.toolbar-button { height: 20px; margin-left: 3px; padding-left: 8px; padding-right: 8px; }
+.save-button:enabled { background-color: #2c5d87; color: #ffffff; }
+.danger-button:hover { background-color: #c2404f; color: #ffffff; }
+
+.workspace { flex-grow: 1; flex-direction: row; }
+
+/* Palette */
+.palette-pane { width: 300px; min-width: 250px; flex-direction: row; background-color: #383838; border-right-width: 1px; border-right-color: #191919; }
+.palette-pane.trash-active { background-color: #4a2a2e; border-right-color: #c2404f; }
+.category-rail { width: 58px; padding-top: 4px; background-color: #2f2f2f; border-right-width: 1px; border-right-color: #232323; }
+.rail-button { align-items: center; padding-top: 7px; padding-bottom: 7px; }
+.rail-button:hover { background-color: #3f3f3f; }
+.rail-dot { width: 16px; height: 16px; border-width: 1px; border-color: #151515; }
+.rail-label { margin-top: 3px; font-size: 10px; color: #a8a8a8; -unity-text-align: middle-center; white-space: normal; }
+.palette-column { flex-grow: 1; }
+.search-field { margin: 6px; }
+.palette-scroll { flex-grow: 1; padding-left: 8px; padding-right: 6px; padding-bottom: 12px; }
+.palette-hint { padding: 5px 8px; font-size: 9px; color: #7a7a7a; }
+.category-header { margin-top: 10px; margin-bottom: 6px; padding-left: 2px; font-size: 11px; -unity-font-style: bold; color: #9a9a9a; }
+.category-subheader { margin-top: 4px; margin-bottom: 4px; padding-left: 6px; font-size: 10px; color: #7f7f7f; border-left-width: 2px; border-left-color: #555555; }
+.palette-block { align-self: flex-start; min-width: 180px; margin-bottom: 8px; }
+.palette-block.sensing-node { min-width: 0; }
+.palette-button { height: 26px; margin: 2px 0 10px 0; }
+.palette-resizer { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; cursor: resize-horizontal; }
+.palette-resizer:hover { background-color: rgba(58, 121, 187, 0.5); }
+.pane-resizer { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; cursor: resize-horizontal; }
+.pane-resizer:hover { background-color: rgba(58, 121, 187, 0.5); }
+.scene-resizer { height: 4px; flex-shrink: 0; background-color: #1a1a1a; cursor: resize-vertical; }
+.scene-resizer:hover { background-color: rgba(58, 121, 187, 0.5); }
+
+/* Definition hats (My Blocks, buffs) */
+.part-node.hat-node > .node-head { border-top-left-radius: 14px; border-top-right-radius: 14px; }
+.part-node.hat-node > .node-head > .node-title { min-height: 36px; border-top-left-radius: 14px; border-top-right-radius: 14px; padding-top: 4px; padding-bottom: 4px; }
+.function-shape { flex-direction: row; flex-wrap: wrap; align-items: center; margin-left: 4px; padding: 2px 6px; background-color: rgba(0, 0, 0, 0.18); border-width: 1px; border-color: rgba(0, 0, 0, 0.35); }
+.argument-pill { margin: 1px 3px; }
+
+/* Canvas */
+.canvas-viewport { flex-grow: 1; min-width: 360px; overflow: hidden; background-color: #202020; }
+.grid-layer { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.canvas-layer { position: absolute; left: 0; top: 0; width: 1px; height: 1px; transform-origin: 0% 0%; overflow: visible; }
+.canvas-help { position: absolute; left: 40px; top: 40px; width: 380px; }
+.canvas-hint { position: absolute; left: 10px; bottom: 8px; font-size: 9px; color: #6a6a6a; }
+
+.zoom-controls { position: absolute; right: 12px; bottom: 10px; flex-direction: row; align-items: center; padding: 3px; background-color: #383838; border-width: 1px; border-color: #191919; }
+.zoom-button { width: 24px; height: 20px; padding: 0; margin: 0 1px; border-radius: 0; }
+.zoom-label { width: 42px; -unity-text-align: middle-center; font-size: 10px; color: #a8a8a8; }
+.zoom-reset { width: 30px; font-size: 9px; }
+
+/* Effect node: colored title bar + dark body; children are wrapped by the left arm and foot. All corners square.
+   Each block is as wide as its own text. Arm and foot follow the head width (in code) */
+.part-node { flex-direction: column-reverse; align-items: flex-start; overflow: visible; }
+.part-node > .node-head { min-width: 60px; background-color: #333333; border-width: 1px; border-color: #0f0f0f; }
+.part-node > .node-bar, .part-node > .node-foot { border-width: 1px; border-color: #0f0f0f; }
+.part-node > .node-mouth > .node-arm { border-left-width: 1px; border-right-width: 1px; border-color: #0f0f0f; }
+.arm-joint { position: absolute; left: 0; bottom: -1px; width: 14px; height: 1px; }
+/* Covers the block above's border line and reaches 7px into the block below */
+.node-connector { position: absolute; left: 10px; bottom: -7px; width: 18px; height: 8px; }
+.root-node { position: absolute; flex-direction: column-reverse; align-items: flex-start; }
+.node-title.root-hat { align-self: flex-start; padding-right: 12px; min-height: 36px; padding-top: 4px; padding-bottom: 4px; border-top-left-radius: 14px; border-top-right-radius: 14px; border-width: 1px; border-color: #0f0f0f; }
+.loose-stack { position: absolute; }
+.scripts-node { align-items: stretch; min-width: 280px; width: 280px; background-color: #333333; border-width: 1px; border-color: #0f0f0f; }
+.scripts-list { padding: 4px 6px 4px 0; }
+.scripts-row { margin-bottom: 4px; border-width: 1px; border-color: #0f0f0f; }
+.scripts-head { flex-direction: row; align-items: center; }
+.scripts-pick { flex-grow: 1; margin-left: 0; }
+.scripts-add { height: 22px; margin: 0; }
+
+.node-title { flex-direction: row; flex-wrap: wrap; align-items: center; min-height: 22px; padding: 2px 3px 2px 8px; }
+/* Where the block above's V notch (9px) sits — text starts below it */
+.part-node > .node-head > .node-title { padding-top: 8px; padding-bottom: 6px; padding-right: 10px; }
+/* Adjacent blocks, arms and feet overlap their borders into a single line */
+.block-sequence > .part-node { margin-top: -1px; }
+.part-node > .node-bar, .part-node > .node-foot { margin-top: -1px; }
+/* Grip. Effect blocks use an inner left strip; sensing blocks leave that much space on the left so they don't cover the enclosing block */
+.part-node > .node-head > .node-title { padding-left: 8px; }
+.part-node > .node-head > .node-fields { padding-left: 8px; }
+.node-name { margin-right: 4px; color: #f0f0f0; font-size: 12px; -unity-font-style: bold; }
+.root-start-summary { margin-left: 6px; color: #e8e8e8; font-size: 11px; opacity: 0.75; }
+.node-fields { padding: 3px 6px 4px 6px; background-color: #333333; }
+.node-property { margin-top: 1px; margin-bottom: 1px; }
+.node-property .unity-base-field__label { min-width: 90px; }
+
+.node-mouth { flex-direction: row; }
+.node-arm { width: 16px; }
+.node-mouth-content { flex-grow: 1; min-height: 16px; }
+.node-bar { min-height: 18px; justify-content: center; padding-left: 8px; }
+.node-bar-name { color: #ececec; font-size: 10px; -unity-font-style: bold; }
+.branch-bar { flex-direction: row; align-items: center; justify-content: flex-start; padding-right: 4px; }
+.branch-button { height: 16px; margin: 1px 0 1px 4px; padding: 0 5px; font-size: 10px; }
+.node-foot { height: 16px; }
+
+/* Sensing blocks · sockets: the shape is the kind (condition = hexagon, event = tag, value = rectangle) */
+.sensing-node { align-self: flex-start; flex-direction: row; align-items: center; min-height: 24px; padding: 2px 8px 2px 6px; }
+.shape-condition { padding-left: 12px; padding-right: 12px; }
+.shape-event { padding-right: 14px; }
+.sensing-node > .node-title { min-height: 20px; padding: 0; }
+.sensing-node > .node-fields { flex-direction: row; align-items: center; padding: 0; background-color: rgba(0, 0, 0, 0); }
+.sensing-node .node-property { margin: 0 6px 0 0; }
+.sensing-node .node-property .unity-base-field__label { min-width: 0; padding-right: 4px; }
+.sensing-node .unity-slider { min-width: 150px; }
+.socket-join { padding: 2px 12px 2px 12px; }
+.socket-joiner { margin: 0 6px 0 6px; color: #ececec; font-size: 11px; -unity-font-style: bold; }
+.sensing-node .node-name { font-size: 11px; }
+.socket-slot { margin: 1px 4px 1px 0; }
+.socket-row { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.socket-row > .drop-zone { height: 20px; width: 0; }
+.socket-row > .drop-zone-active { width: 18px; }
+.socket-row > .socket-empty { width: auto; }
+.socket-empty { min-width: 56px; height: 20px; justify-content: center; padding-left: 12px; padding-right: 12px; }
+.socket-empty-label { font-size: 10px; color: rgba(255, 255, 255, 0.45); -unity-text-align: middle-center; }
+
+/* Drop slot: height 0 so blocks stay flush. While dragging, only the one snap spot gets a shadow of the dragged blocks (Scratch) */
+.block-sequence { flex-direction: column-reverse; align-items: flex-start; }
+.block-sequence > .drop-zone { align-self: stretch; }
+
+.drop-zone { height: 0; }
+.drop-zone-empty { height: 0; }
+.drop-zone.drop-zone-marker { height: auto; }
+.insertion-marker { align-self: flex-start; opacity: 0.35; }
+.drop-zone-active { background-color: rgba(58, 121, 187, 0.55); border-width: 1px; border-color: #5a9ee6; }
+.socket-empty.drop-zone-active { background-color: rgba(58, 121, 187, 0.45); border-width: 0; }
+/* Shows the filled block that dropping here would replace */
+.drop-swap-active { opacity: 0.6; border-width: 2px; border-color: #5a9ee6; }
+
+/* Grabbed blocks leave the stack. They hold the drag pointer, so they leave the flow without leaving the hierarchy */
+.block-drag-source { position: absolute; opacity: 0; }
+.sensing-node.block-selected { border-width: 2px; border-color: #f0c040; }
+/* Selected effect blocks and states change the outline color of their pieces instead of drawing a box */
+.part-node.block-selected > .node-head, .part-node.block-selected > .node-bar, .part-node.block-selected > .node-foot, .part-node.block-selected > .node-mouth > .node-arm { border-color: #f0c040; }
+.state-selected > .root-hat,
+.state-selected > .block-sequence > .part-node > .node-head, .state-selected > .block-sequence > .part-node > .node-bar,
+.state-selected > .block-sequence > .part-node > .node-foot, .state-selected > .block-sequence > .part-node > .node-mouth > .node-arm { border-color: #5aa6ff; }
+.selection-marquee { position: absolute; background-color: rgba(58, 121, 187, 0.15); border-width: 1px; border-color: #5a9ee6; }
+.drag-preview { position: absolute; left: 0; top: 0; opacity: 0.9; transform-origin: 0% 0%; }
+
+/* Right item panel: shown as cards instead of an inspector; click text to edit in place */
+.item-pane-shell { width: 300px; min-width: 240px; background-color: #383838; border-left-width: 1px; border-left-color: #191919; }
+.item-pane-title { height: 24px; padding-left: 10px; -unity-text-align: middle-left; font-size: 11px; -unity-font-style: bold; color: #a8a8a8; background-color: #2f2f2f; border-bottom-width: 1px; border-bottom-color: #232323; }
+.item-pane { flex-grow: 1; padding: 10px; }
+
+/* Plain value fields placed on the title bar */
+.title-field { margin: 1px 6px 1px 0; }
+.title-field .unity-base-field__label { min-width: 0; padding-right: 4px; color: #ececec; }
+.title-field .unity-slider { min-width: 140px; }
+.title-field .unity-color-field__input { min-width: 90px; }
+/* Typed value fields: dark translucent over the block color, like the palette preview (instead of Unity's gray box) */
+.title-field .unity-base-text-field__input { border-width: 0; background-color: rgba(0, 0, 0, 0.3); color: #ffffff; }
+.title-field-placeholder { margin-right: 6px; padding: 1px 6px; font-size: 10px; color: #dcdcdc; background-color: rgba(0, 0, 0, 0.25); }
+
+.drone-field-host { width: 200px; margin-left: 4px; }
+
+.toolbar-host { flex-direction: row; align-items: center; }
+.variable-row { flex-direction: row; align-items: center; }
+.variable-type { margin-left: 4px; color: #ffffff; opacity: 0.55; }
+
+/* Every picker inside a block looks like the enum pill: rounded, darkened block color, bold white text */
+.node .unity-base-popup-field__input { min-width: 0; margin: 1px 0; padding: 1px 8px 1px 10px; border-width: 0; border-radius: 10px; background-color: rgba(0, 0, 0, 0.3); color: #ffffff; -unity-font-style: bold; }
+.node .unity-base-popup-field__input:hover { background-color: rgba(0, 0, 0, 0.42); }
+.node .unity-base-popup-field__text { color: #ffffff; -unity-font-style: bold; }
+
+/* Inline pill dropdown */
+.title-dropdown { margin: 1px 6px 1px 0; min-width: 0; }
+.title-dropdown .unity-base-popup-field__input { min-width: 0; padding: 1px 6px 1px 10px; border-width: 0; border-radius: 10px; background-color: rgba(0, 0, 0, 0.3); }
+.title-dropdown .unity-base-popup-field__text { color: #ffffff; -unity-font-style: bold; }
+.title-dropdown .unity-base-popup-field__arrow { margin-left: 4px; }
+.title-dropdown-placeholder { margin-right: 6px; padding: 1px 8px; border-radius: 10px; font-size: 10px; color: #ffffff; -unity-font-style: bold; background-color: rgba(0, 0, 0, 0.3); }
+.sensing-node.shape-value { padding-left: 7px; padding-right: 7px; }
+.sensing-node.shape-value .title-field { flex-grow: 0; margin-right: 0; }
+.node .pick-text .unity-text-field__input { border-width: 0; border-radius: 10px; padding: 1px 8px; background-color: rgba(0, 0, 0, 0.3); color: #ffffff; -unity-font-style: bold; }

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 621e3cab38658d34f9e8069b6fdf30a2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 181727
+  packageName: Cheat Console
+  packageVersion: 1.0
+  assetPath: Assets/Avocado/DeveloperCheatConsole/Scripts/Core/DeveloperConsole.cs
+  uploadId: 397396

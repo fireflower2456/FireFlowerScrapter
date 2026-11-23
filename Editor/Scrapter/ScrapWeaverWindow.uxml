@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:Style src="ScrapWeaverWindow.uss" />
+    <ui:VisualElement name="root" class="effect-editor">
+        <ui:VisualElement class="top-bar">
+            <ui:VisualElement name="toolbarHost" class="toolbar-host" />
+            <ui:Button name="pingButton" text="Find" class="toolbar-button" />
+            <ui:VisualElement class="top-bar-spacer" />
+            <ui:Button name="clearButton" text="Clear All" class="toolbar-button" />
+            <ui:Button name="saveButton" text="Save (Ctrl+S)" class="toolbar-button save-button" />
+        </ui:VisualElement>
+
+        <ui:VisualElement class="workspace">
+            <ui:VisualElement name="palettePane" class="palette-pane">
+                <ui:VisualElement name="categoryRail" class="category-rail" />
+                <ui:VisualElement class="palette-column">
+                    <ui:TextField name="searchField" class="search-field" />
+                    <ui:ScrollView name="paletteScroll" class="palette-scroll" />
+                    <ui:Label text="Drag nodes here to delete" class="palette-hint" />
+                </ui:VisualElement>
+                <ui:VisualElement name="paletteResizer" class="palette-resizer" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="canvasViewport" class="canvas-viewport">
+                <ui:VisualElement name="gridLayer" class="grid-layer" />
+                <ui:VisualElement name="canvasLayer" class="canvas-layer" />
+                <ui:VisualElement class="zoom-controls">
+                    <ui:Button name="zoomOutButton" text="−" class="zoom-button" />
+                    <ui:Label name="zoomLabel" text="100%" class="zoom-label" />
+                    <ui:Button name="zoomInButton" text="+" class="zoom-button" />
+                    <ui:Button name="zoomResetButton" text="1:1" class="zoom-button zoom-reset" />
+                </ui:VisualElement>
+                <ui:Label text="Wheel to zoom · Drag empty space to pan · Shift+drag to box select · Alt+drag for a single block · Right-click a block for the menu · Save to apply to the asset" class="canvas-hint" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="item-pane-shell">
+                <ui:Label name="paneTitle" text="Item" class="item-pane-title" />
+                <ui:ScrollView name="itemPane" class="item-pane" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

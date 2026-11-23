@@ -1,0 +1,11 @@
+{
+    "name": "FireFlower.Samples.FeedbackBasics",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Core",
+        "FireFlower.Catalog",
+        "FireFlower.Feedback",
+        "Unity.InputSystem"
+    ],
+    "autoReferenced": true
+}

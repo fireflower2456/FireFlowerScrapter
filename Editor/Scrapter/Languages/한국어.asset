@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a29a72aff880248971f39b5d5e50b5, type: 3}
+  m_Name: "\uD55C\uAD6D\uC5B4"
+  m_EditorClassIdentifier: FireFlower.Scrapter.Editor::FireFlower.ScrapterLanguage
+  entries:
+  - english: Action
+    text: "\uB3D9\uC791"
+  - english: Looks
+    text: "\uC2DC\uAC01"
+  - english: Events
+    text: "\uC774\uBCA4\uD2B8"
+  - english: Control
+    text: "\uC81C\uC5B4"
+  - english: Sensing
+    text: "\uAC10\uC9C0"
+  - english: Operators
+    text: "\uC5F0\uC0B0"
+  - english: Variables
+    text: "\uBCC0\uC218"
+  - english: My Blocks
+    text: "\uB0B4 \uBE14\uB85D"
+  - english: Sound
+    text: "\uC18C\uB9AC"
+  - english: repeat {count}
+    text: "{count}\uBC88 \uBC18\uBCF5\uD558\uAE30"
+  - english: tween {value} {mode} {target} over {seconds} s {curve}
+    text: "{value}\uC744(\uB97C) {seconds}\uCD08 \uB3D9\uC548 {curve}(\uC73C)\uB85C
+      {target} {mode} \uBC14\uAFB8\uAE30"
+  - english: run separately
+    text: "\uB530\uB85C \uC2E4\uD589\uD558\uAE30"
+  - english: pick one at random
+    text: "\uB79C\uB364\uC73C\uB85C \uD558\uB098"
+  - english: branch
+    text: "\uAC08\uB798"
+  - english: set color of {on} to {color}
+    text: "{on} \uC0C9\uC744 {color}(\uC73C)\uB85C"
+  - english: play animation {clip} on {transform} at speed {speed}
+    text: "{transform} \uC560\uB2C8\uBA54\uC774\uC158 {clip} \uC7AC\uC0DD \uC18D\uB3C4
+      {speed}"
+  - english: if {condition} then
+    text: "\uB9CC\uC57D {condition}\uC774\uBA74"
+  - english: else
+    text: "\uC544\uB2C8\uBA74"
+  - english: while {condition}
+    text: "{condition}\uC778 \uB3D9\uC548"
+  - english: forever
+    text: "\uBB34\uD55C \uBC18\uBCF5\uD558\uAE30"
+  - english: define
+    text: "\uC815\uC758\uD558\uAE30"
+  - english: wait until {condition}
+    text: "{condition}\uAE4C\uC9C0 \uAE30\uB2E4\uB9AC\uAE30"
+  - english: repeat until {condition}
+    text: "{condition}\uAE4C\uC9C0 \uBC18\uBCF5\uD558\uAE30"
+  - english: call
+    text: "\uD638\uCD9C"
+  - english: "\u25C6 weight {weight}"
+    text: "\u25C6 \uBB34\uAC8C {weight}"
+  - english: when disabled
+    text: "\uAEBC\uC9C8 \uB54C \uC2E4\uD589"
+  - english: wait {seconds} seconds
+    text: "{seconds}\uCD08 \uAE30\uB2E4\uB9AC\uAE30"
+  - english: send signal {key}
+    text: "{key} \uC2E0\uD638 \uBCF4\uB0B4\uAE30"
+  - english: for {seconds} s
+    text: "{seconds}\uCD08 \uB3D9\uC548"
+  - english: when {evt}
+    text: "{evt}\uC77C \uB54C"
+  - english: for each object within {radius} of {center} on {layers}
+    text: "{center}\uC5D0\uC11C \uBC18\uACBD {radius} \uC548\uC758 {layers}\uB9C8\uB2E4"
+  - english: at most
+    text: "\uCD5C\uB300"
+  - english: play feedback on {target}
+    text: "{target}\uC5D0 \uD53C\uB4DC\uBC31"
+  - english: play particle {key} on {target}
+    text: "{target}\uC5D0 {key} \uD30C\uD2F0\uD074"
+  - english: set BGM to {key}
+    text: "\uBC30\uACBD\uC74C\uC545\uC744 {key}(\uC73C)\uB85C \uC815\uD558\uAE30"
+  - english: direction from {from} {to} to
+    text: "{from}\uC5D0\uC11C {to}\uC744(\uB97C) \uBCF4\uB294 \uBC29\uD5A5"
+  - english: distance to {layers} {from} from toward {direction} up to {distance}
+    text: "{from}\uC5D0\uC11C {direction}\uCABD\uC73C\uB85C {distance}\uAE4C\uC9C0
+      {layers}\uC5D0 \uB2FF\uB294 \uAC70\uB9AC"
+  - english: pick random {min} to {max}
+    text: "{min}\uBD80\uD130 {max} \uC0AC\uC774\uC758 \uB09C\uC218"
+  - english: "{a} turned toward {b} by at most {c} \xB0"
+    text: "{a}\uC744(\uB97C) {b}\uCABD\uC73C\uB85C \uCD5C\uB300 {c}\uB3C4 \uB3CC\uB9B0
+      \uAC01\uB3C4"
+  - english: input
+    text: "\uC785\uB825\uAC12"
+  - english: "unit vector at {degrees} \xB0"
+    text: "{degrees}\uB3C4 \uBC29\uD5A5\uC758 \uB2E8\uC704 \uBCA1\uD130"
+  - english: not {condition}
+    text: "{condition}\uC774(\uAC00) \uC544\uB2C8\uB2E4"
+  - english: '{transform} exists'
+    text: "{transform}\uC774(\uAC00) \uC788\uC74C"
+  - english: element
+    text: "\uC6D0\uC18C"
+  - english: this
+    text: "\uC790\uC2E0"
+  - english: other
+    text: "\uC0C1\uB300"
+  - english: nearest {layers} within {radius} of {center}
+    text: "{center}\uC5D0\uC11C \uBC18\uACBD {radius} \uC548\uC758 \uAC00\uC7A5 \uAC00\uAE4C\uC6B4
+      {layers}"
+  - english: '{component} of {from}'
+    text: "{from}\uC758 {component}"
+  - english: when I receive signal {key}
+    text: "{key} \uC2E0\uD638\uB97C \uBC1B\uC558\uC744 \uB54C"
+  - english: Amount
+    text: "\uC591"
+  - english: Center
+    text: "\uAE30\uC900"
+  - english: Children
+    text: "\uBE14\uB85D"
+  - english: Clip
+    text: "\uD074\uB9BD"
+  - english: Color
+    text: "\uC0C9"
+  - english: Condition
+    text: "\uC870\uAC74"
+  - english: Conditions
+    text: "\uC870\uAC74"
+  - english: Count
+    text: "\uD69F\uC218"
+  - english: Curve
+    text: "\uACE1\uC120"
+  - english: Degrees
+    text: "\uAC01\uB3C4"
+  - english: Direction
+    text: "\uBC29\uD5A5"
+  - english: Distance
+    text: "\uAC70\uB9AC"
+  - english: Evt
+    text: "\uC774\uBCA4\uD2B8"
+  - english: Feedback
+    text: "\uD53C\uB4DC\uBC31"
+  - english: From
+    text: "\uAE30\uC900"
+  - english: Func
+    text: "\uD568\uC218"
+  - english: Key
+    text: "\uC774\uB984"
+  - english: Kind
+    text: "\uC885\uB958"
+  - english: Layers
+    text: "\uB808\uC774\uC5B4"
+  - english: Max
+    text: "\uCD5C\uB300"
+  - english: Min
+    text: "\uCD5C\uC18C"
+  - english: Mode
+    text: "\uBC29\uC2DD"
+  - english: Numbers
+    text: "\uC22B\uC790"
+  - english: On
+    text: "\uB300\uC0C1"
+  - english: Op
+    text: "\uC5F0\uC0B0"
+  - english: Path
+    text: "\uACBD\uB85C"
+  - english: Radius
+    text: "\uBC18\uACBD"
+  - english: Revert
+    text: "\uC6D0\uB798 \uAC12\uC73C\uB85C \uB418\uB3CC\uB9AC\uAE30"
+  - english: Root
+    text: "\uB300\uC0C1"
+  - english: Seconds
+    text: "\uCD08"
+  - english: Size
+    text: "\uD06C\uAE30"
+  - english: Source
+    text: "\uB300\uC0C1"
+  - english: Speed
+    text: "\uC18D\uB3C4"
+  - english: Target
+    text: "\uBAA9\uD45C"
+  - english: To
+    text: "\uB300\uC0C1"
+  - english: Until Off
+    text: "\uAEBC\uC9C8 \uB54C\uAE4C\uC9C0"
+  - english: Value
+    text: "\uAC12"
+  - english: Weight
+    text: "\uBB34\uAC8C"
+  - english: Find
+    text: "\uCC3E\uAE30"
+  - english: Clear All
+    text: "\uBAA8\uB450 \uC9C0\uC6B0\uAE30"
+  - english: Save (Ctrl+S)
+    text: "\uC800\uC7A5 (Ctrl+S)"
+  - english: Drag nodes here to delete
+    text: "\uC5EC\uAE30\uB85C \uB04C\uC5B4 \uB193\uC73C\uBA74 \uC0AD\uC81C"
+  - english: "Wheel to zoom \xB7 Drag empty space to pan \xB7 Shift+drag to box select
+      \xB7 Alt+drag for a single block \xB7 Right-click a block for the menu \xB7
+      Save to apply to the asset"
+    text: "\uD720: \uD655\uB300\xB7\uCD95\uC18C \xB7 \uBE48 \uACF3 \uB04C\uAE30:
+      \uD654\uBA74 \uC774\uB3D9 \xB7 Shift+\uB04C\uAE30: \uC601\uC5ED \uC120\uD0DD
+      \xB7 Alt+\uB04C\uAE30: \uBE14\uB85D \uD558\uB098\uB9CC \xB7 \uBE14\uB85D \uC6B0\uD074\uB9AD:
+      \uBA54\uB274 \xB7 \uC800\uC7A5\uD574\uC57C \uC5D0\uC14B\uC5D0 \uBC18\uC601"
+  - english: Item
+    text: "\uD56D\uBAA9"
+  - english: Pick an asset to edit with blocks.
+    text: "\uBE14\uB85D\uC73C\uB85C \uD3B8\uC9D1\uD560 \uC5D0\uC14B\uC744 \uACE0\uB974\uC138\uC694."
+  - english: Pick an asset to edit as blocks, or create a block script with [New].
+    text: "\uBE14\uB85D\uC73C\uB85C \uD3B8\uC9D1\uD560 \uC5D0\uC14B\uC744 \uACE0\uB974\uAC70\uB098
+      [\uC0C8\uB85C \uB9CC\uB4E4\uAE30]\uB85C \uBE14\uB85D \uC2A4\uD06C\uB9BD\uD2B8\uB97C
+      \uB9CC\uB4DC\uC138\uC694."
+  - english: when {0} starts
+    text: "{0} \uC2DC\uC791\uD560 \uB54C"
+  - english: Clear Effects
+    text: "\uD6A8\uACFC \uBAA8\uB450 \uC9C0\uC6B0\uAE30"
+  - english: Delete all {0} effects of {1}?
+    text: "{1}\uC758 \uD6A8\uACFC {0}\uAC1C\uB97C \uBAA8\uB450 \uC9C0\uC6B8\uAE4C\uC694?"
+  - english: Clear
+    text: "\uC9C0\uC6B0\uAE30"
+  - english: Cancel
+    text: "\uCDE8\uC18C"
+  - english: Unsaved Changes
+    text: "\uC800\uC7A5 \uC548 \uD55C \uBCC0\uACBD \uC0AC\uD56D"
+  - english: '{0} has unsaved changes.'
+    text: "{0}\uC5D0 \uC800\uC7A5 \uC548 \uD55C \uBCC0\uACBD \uC0AC\uD56D\uC774 \uC788\uC2B5\uB2C8\uB2E4."
+  - english: The effects of {0} have unsaved changes.
+    text: "{0}\uC758 \uD6A8\uACFC\uC5D0 \uC800\uC7A5 \uC548 \uD55C \uBCC0\uACBD \uC0AC\uD56D\uC774
+      \uC788\uC2B5\uB2C8\uB2E4."
+  - english: Save
+    text: "\uC800\uC7A5"
+  - english: Discard
+    text: "\uBC84\uB9AC\uAE30"
+  - english: Could not find the ScrapWeaver UXML or USS.
+    text: "ScrapWeaver UXML \uB610\uB294 USS\uB97C \uCC3E\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4."
+  - english: Make a Variable
+    text: "\uBCC0\uC218 \uB9CC\uB4E4\uAE30"
+  - english: Make a Block
+    text: "\uBE14\uB85D \uB9CC\uB4E4\uAE30"
+  - english: Edit Block
+    text: "\uBE14\uB85D \uD3B8\uC9D1"
+  - english: Rename
+    text: "\uC774\uB984 \uBC14\uAFB8\uAE30"
+  - english: Delete
+    text: "\uC0AD\uC81C"
+  - english: Edit
+    text: "\uD3B8\uC9D1"
+  - english: Built-in variables
+    text: "\uAE30\uBCF8 \uBCC0\uC218"
+  - english: Built-in {0} variable
+    text: "\uAE30\uBCF8 {0} \uBCC0\uC218"
+  - english: Add Script
+    text: "\uC2A4\uD06C\uB9BD\uD2B8 \uCD94\uAC00"
+  - english: Scripts
+    text: "\uC2A4\uD06C\uB9BD\uD2B8"
+  - english: Remove this branch
+    text: "\uC774 \uAC08\uB798 \uC0AD\uC81C"
+  - english: + branch
+    text: "+ \uAC08\uB798"
+  - english: Add a branch
+    text: "\uAC08\uB798 \uCD94\uAC00"
+  - english: New Variable
+    text: "\uC0C8 \uBCC0\uC218"
+  - english: 'New variable name:'
+    text: "\uC0C8 \uBCC0\uC218 \uC774\uB984:"
+  - english: For this effect only (local)
+    text: "\uC774 \uD6A8\uACFC\uC5D0\uC11C\uB9CC (\uC9C0\uC5ED)"
+  - english: For all effects on this object (object)
+    text: "\uC774 \uC624\uBE0C\uC81D\uD2B8\uC758 \uBAA8\uB4E0 \uD6A8\uACFC\uC5D0\uC11C
+      (\uC624\uBE0C\uC81D\uD2B8)"
+  - english: For all effects (global)
+    text: "\uBAA8\uB4E0 \uD6A8\uACFC\uC5D0\uC11C (\uC804\uC5ED)"
+  - english: Kept in saves (persistent)
+    text: "\uC800\uC7A5\uC5D0 \uB0A8\uAE40 (\uC601\uAD6C)"
+  - english: Enter a name.
+    text: "\uC774\uB984\uC744 \uC785\uB825\uD558\uC138\uC694."
+  - english: A variable with that name already exists.
+    text: "\uAC19\uC740 \uC774\uB984\uC758 \uBCC0\uC218\uAC00 \uC774\uBBF8 \uC788\uC2B5\uB2C8\uB2E4."
+  - english: Persistent variables must be float.
+    text: "\uC601\uAD6C \uBCC0\uC218\uB294 float\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4."
+  - english: Rename Variable
+    text: "\uBCC0\uC218 \uC774\uB984 \uBC14\uAFB8\uAE30"
+  - english: 'New name for ''{0}'':'
+    text: "'{0}'\uC758 \uC0C8 \uC774\uB984:"
+  - english: Delete Variable
+    text: "\uBCC0\uC218 \uC0AD\uC81C"
+  - english: 'Can''t delete ''{0}'': blocks are using it.'
+    text: "'{0}'\uC740(\uB294) \uBE14\uB85D\uC774 \uC4F0\uACE0 \uC788\uC5B4 \uC9C0\uC6B8
+      \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - english: OK
+    text: "\uD655\uC778"
+  - english: (missing element)
+    text: "(\uC5C6\uB294 \uC6D0\uC18C)"
+  - english: (missing input)
+    text: "(\uC5C6\uB294 \uC785\uB825\uAC12)"
+  - english: (missing block)
+    text: "(\uC5C6\uB294 \uBE14\uB85D)"
+  - english: Delete Definition
+    text: "\uC815\uC758 \uC0AD\uC81C"
+  - english: 'Can''t delete: this block is still called somewhere.'
+    text: "\uC9C0\uC6B8 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4: \uC774 \uBE14\uB85D\uC744
+      \uC544\uC9C1 \uC5B4\uB518\uAC00\uC5D0\uC11C \uD638\uCD9C\uD569\uB2C8\uB2E4."
+  - english: Copy
+    text: "\uBCF5\uC0AC"
+  - english: Paste
+    text: "\uBD99\uC5EC\uB123\uAE30"
+  - english: block name
+    text: "\uBE14\uB85D \uC774\uB984"
+  - english: Add an input
+    text: "\uC785\uB825\uAC12 \uCD94\uAC00"
+  - english: number
+    text: "\uC22B\uC790"
+  - english: boolean
+    text: "\uCC38/\uAC70\uC9D3"
+  - english: Add a label
+    text: "\uAE00\uC790 \uCD94\uAC00"
+  - english: label
+    text: "\uAE00\uC790"
+  - english: A block needs at least one label.
+    text: "\uBE14\uB85D\uC5D0\uB294 \uAE00\uC790\uAC00 \uD558\uB098 \uC774\uC0C1
+      \uC788\uC5B4\uC57C \uD569\uB2C8\uB2E4."
+  - english: Enter a name for each input.
+    text: "\uC785\uB825\uAC12\uB9C8\uB2E4 \uC774\uB984\uC744 \uC785\uB825\uD558\uC138\uC694."
+  - english: Type
+    text: "\uC885\uB958"
+  - english: An asset with a ScrapSet field
+    text: "ScrapSet \uD544\uB4DC\uAC00 \uC788\uB294 \uC5D0\uC14B"
+  - english: New
+    text: "\uC0C8\uB85C \uB9CC\uB4E4\uAE30"
+  - english: New Block Script
+    text: "\uC0C8 \uBE14\uB85D \uC2A4\uD06C\uB9BD\uD2B8"
+  - english: Where to save the block script asset
+    text: "\uBE14\uB85D \uC2A4\uD06C\uB9BD\uD2B8 \uC5D0\uC14B\uC744 \uC800\uC7A5\uD560
+      \uACF3"
+  - english: '{0} can''t be used in a {1} socket'
+    text: "{0}\uC740(\uB294) {1} \uC18C\uCF13\uC5D0 \uC4F8 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4"
+  - english: Unknown type for the preceding value
+    text: "\uC55E \uAC12\uC758 \uD0C0\uC785\uC744 \uC54C \uC218 \uC5C6\uC2B5\uB2C8\uB2E4"
+  - english: Nothing to pick
+    text: "\uACE0\uB97C \uAC83\uC774 \uC5C6\uC2B5\uB2C8\uB2E4"
+  - english: (no variable)
+    text: "(\uBCC0\uC218 \uC5C6\uC74C)"
+  - english: block
+    text: "\uBE14\uB85D"
+  - english: value
+    text: "\uAC12"
+  - english: condition
+    text: "\uC870\uAC74"
+  - english: event
+    text: "\uC774\uBCA4\uD2B8"

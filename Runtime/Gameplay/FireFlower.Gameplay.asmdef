@@ -1,0 +1,22 @@
+{
+    "name": "FireFlower.Gameplay",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Scrap",
+        "FireFlower.Core",
+        "FireFlower.Stat",
+        "FireFlower.Catalog",
+        "MackySoft.SerializeReferenceExtensions",
+        "NaughtyAttributes.Core",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "Unity.Localization",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.Cinemachine",
+        "FireFlower.Feedback"
+    ],
+    "autoReferenced": true
+}

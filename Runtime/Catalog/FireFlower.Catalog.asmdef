@@ -1,0 +1,10 @@
+{
+    "name": "FireFlower.Catalog",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "NaughtyAttributes.Core",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
+    ],
+    "autoReferenced": true
+}
