@@ -1,11 +1,13 @@
 using System;
 using ScrapWeaver;
 using UnityEngine;
+using UnityEngine.Scripting.APIUpdating;
 
 namespace FireFlower
 {
-    // Optional feedback module: blocks for the package's VFX / sound / feedback managers
+    // Blocks that call the feedback module (VFX / sound / feedback tables). Saved assets know them by assembly, hence MovedFrom
 
+    [MovedFrom(false, sourceNamespace: "FireFlower", sourceAssembly: "FireFlower.Gameplay")]
     [Serializable, Category("Looks"), Display("play particle", nameof(key), "on", nameof(target))]
     public class ParticleBlock : ActionBlock
     {
@@ -23,6 +25,7 @@ namespace FireFlower
         }
     }
 
+    [MovedFrom(false, sourceNamespace: "FireFlower", sourceAssembly: "FireFlower.Gameplay")]
     [Serializable, Category("Sound"), Display("set BGM to", nameof(key))]
     public class BgmBlock : ActionBlock
     {
@@ -32,6 +35,7 @@ namespace FireFlower
     }
 
     // Plays feedback (shake, sound, hit stop, screen flash, animation, etc.) at the target's position
+    [MovedFrom(false, sourceNamespace: "FireFlower", sourceAssembly: "FireFlower.Gameplay")]
     [Serializable, Category("Looks"), Display("play feedback on", nameof(target))]
     public class FeedbackBlock : ActionBlock
     {

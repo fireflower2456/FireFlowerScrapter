@@ -3,7 +3,6 @@
     "rootNamespace": "FireFlower",
     "references": [
         "FireFlower.Scrap",
-        "FireFlower.Gameplay",
         "FireFlower.Feedback",
         "FireFlower.Core",
         "FireFlower.Stat",

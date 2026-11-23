@@ -1,0 +1,11 @@
+{
+    "name": "FireFlower.Feedback.Blocks",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Scrap",
+        "FireFlower.Feedback",
+        "FireFlower.Core",
+        "FireFlower.Common"
+    ],
+    "autoReferenced": true
+}

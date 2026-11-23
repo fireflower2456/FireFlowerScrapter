@@ -1,33 +1,39 @@
 # FireFlowerScrapter
 
-A Scratch-style **block editor for Unity**. Build behaviour out of blocks instead of C#, save it as an asset, and run it on any GameObject.
+Block editor for Unity, kind of like Scratch. You put blocks together in an editor window, save them as an asset, and run that asset on a GameObject.
 
-Blocks think like C#: variables, `if`, loops, `await`-style waits, events, functions, and `object.member.member` access to anything on a component. The goal is *few blocks, consistent structure* — read and write the values Unity already has instead of adding special-purpose blocks.
+The blocks follow C# closely: variables, if/else, loops, waits, events, functions. There isn't a block for every Unity property. One dot block reads or writes any member instead, so `transform.position` or `rigidbody.linearVelocity` work the same way they do in code.
 
 ## Install
 
-1. Unity **6000.3** or newer.
-2. Install this package: Package Manager ▸ **+** ▸ *Install package from git URL…* ▸ `https://github.com/fireflower2456/FireFlowerScrapter.git` (add `#v0.4.0` to pin a version).
-   Unity dependencies (Localization, Input System, Core RP, Cinemachine, uGUI) come in automatically.
+Unity 6000.3 or later. In the Package Manager, choose *Add package from git URL* and paste:
 
-## Quick start
+```
+https://github.com/fireflower2456/FireFlowerScrapter.git#v0.5.0
+```
 
-1. **Make a script asset.** Open **Tools ▸ FireFlower ▸ Scraper** and press **New** (or *Create ▸ FireFlower ▸ Scrap*). This creates a `ScrapAsset`.
-2. **Build it.** Drag blocks from the palette onto the canvas, under the start hat. Save with **Ctrl+S**.
-3. **Attach it.** Add the **Scrap Player** component (*Add Component ▸ FireFlower ▸ Scrap Player*) to any GameObject and drop the asset into its slot.
-4. **Press Play.** The script starts when the component is enabled and stops when it is disabled. In the blocks, **(this)** is that GameObject.
+Leave off `#v0.5.0` to follow the latest commit. The Unity packages it needs (Localization, Input System, Core RP, Cinemachine, uGUI) get installed along with it.
 
-Example — spin a cube forever:
+## Getting started
+
+1. Open *Tools > FireFlower > Scraper* and press *New*. That creates a `ScrapAsset`.
+2. Drag blocks from the palette under the start block. Ctrl+S saves.
+3. Add a *Scrap Player* component to a GameObject and assign the asset.
+4. Press Play. The script runs while the component is enabled. `(this)` in the blocks is that GameObject.
+
+Spinning a cube:
 
 ```
 when Spinner starts
 forever
-    (this) . eulerAngles.z  +=  (90 × (Time.deltaTime))
+    (this).eulerAngles.z += 90 × Time.deltaTime
 ```
 
-`(this) . eulerAngles.z` is a *dot block*: pick a value, type `.`, and choose a member, exactly like `transform.eulerAngles.z` in C#. To reach another component, use the GetComponent block **[Rigidbody2D] of (this)** or a Component-typed variable, then pick its member (`linearVelocity`, `mass`, …).
+For other components, get one with `[Rigidbody2D] of (this)` or keep it in a component variable, then pick a member off it.
 
 ## Running from code
+
+Scrap Player is basically this:
 
 ```csharp
 using FireFlower;
@@ -38,25 +44,28 @@ public class Trap : MonoBehaviour
     [SerializeField] ScrapAsset onEnter;
     ScrapRunner runner;
 
-    void OnEnable() => runner = onEnter.Run(this); // (this) in the blocks = this object
-    void Update() => runner?.Tick();               // every frame — waits, loops and tweens advance here
+    void OnEnable() => runner = onEnter.Run(this);
+    void Update() => runner?.Tick();
     void OnDisable() { runner?.Stop(); runner = null; }
 }
 ```
 
-`ScrapPlayer` does exactly this for you.
+`Tick` is what moves waits, loops and tweens forward, so call it every frame.
 
-## What's inside
+## Assemblies
 
-| Assembly | Contents |
+| Assembly | What's in it |
 |---|---|
-| `FireFlower.Scrap` | The block runtime: `ScrapSet`, `ScrapRunner`, `ScrapAsset`, `ScrapPlayer` and the core blocks. Depends on nothing game-specific. |
-| `FireFlower.Gameplay` | Optional modules on top: a mob framework (`Entity/`), a state controller (`Composable/`), and feedback blocks (`Blocks/`: particles, BGM, feedback tables). |
-| `FireFlower.Scrapter.Editor` | The Scraper window, the base `ScrapterWindow` for your own editors, block field drawers. |
-| `FireFlower.Feedback` | Feedback tables, particles, sound, VFX. |
-| `FireFlower.Catalog` (+Editor) | Catalogs: ScriptableObject lists looked up by id or key. Assign them where they are used (e.g. `VFXManager.catalog`). |
-| `FireFlower.Stat` / `Core` / `UI` | Stat sheet, dev console, time, pooling, UI helpers. |
+| `FireFlower.Scrap` | Block runtime and the core blocks. No other dependencies. |
+| `FireFlower.Scrapter.Editor` | The Scraper window, and `ScrapterWindow` if you want to build your own editor on top. |
+| `FireFlower.Feedback` | Feedback tables, particles, sound, screen shake. `Feedback.Blocks` adds blocks that call them. |
+| `FireFlower.Catalog` | ScriptableObject lists looked up by id or key. Assign them where they're used, e.g. `VFXManager.catalog`. |
+| `FireFlower.Stat`, `Core`, `Common` | Stats, dev console, pooling, inspector attributes. |
 
-## Documentation
+## Docs
 
-- [Guide](Documentation~/Guide.md) — concepts, variables, dot blocks, running scripts, writing your own blocks, your own editor windows, saved-data rules, performance.
+[Documentation~/Guide.md](Documentation~/Guide.md) goes into variables, dot blocks, writing your own blocks and editor windows, and what not to rename once assets are saved.
+
+## License
+
+MIT

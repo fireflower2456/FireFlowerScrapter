@@ -330,6 +330,8 @@ MonoBehaviour:
     text: "\uC885\uB958"
   - english: An asset with a ScrapSet field
     text: "ScrapSet \uD544\uB4DC\uAC00 \uC788\uB294 \uC5D0\uC14B"
+  - english: Block assets
+    text: "\uBE14\uB85D \uC5D0\uC14B"
   - english: New
     text: "\uC0C8\uB85C \uB9CC\uB4E4\uAE30"
   - english: New Block Script

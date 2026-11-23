@@ -239,7 +239,7 @@ Common hooks:
 
 ## 8. Optional modules
 
-The core (`FireFlower.Scrap`) knows nothing about any game. `FireFlower.Gameplay` adds optional blocks — use them, or ignore them and write your own the same way (game rules such as damage or stats belong in your project, built like the examples in section 6):
+The core (`FireFlower.Scrap`) knows nothing about any game. `FireFlower.Feedback.Blocks` adds optional blocks — use them, or ignore them and write your own the same way (game rules such as damage or stats belong in your project, built like the examples in section 6):
 
 - **Feedback**: *play particle*, *set BGM*, *play feedback* (needs the package's VFX/Sound managers).
 
@@ -251,7 +251,7 @@ Blocks are `[SerializeReference]`, so **class name, namespace, assembly and fiel
 - Renaming a field: `[FormerlySerializedAs("old")]`, re-save, then remove it.
 - Replacing a block with a different structure: keep the old type, convert the data with an editor script, save, then delete the old type.
 - Afterwards check for missing types with `SerializationUtility.HasManagedReferencesWithMissingTypes`.
-- This package's blocks live in `ns: FireFlower`, `asm: FireFlower.Scrap` (core) or `asm: FireFlower.Gameplay` (feedback blocks).
+- This package's blocks live in `ns: FireFlower`, `asm: FireFlower.Scrap` (core) or `asm: FireFlower.Feedback.Blocks` (feedback blocks).
 
 ## 10. Performance
 
