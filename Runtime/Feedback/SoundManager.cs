@@ -15,7 +15,7 @@ namespace FireFlower
         const float OffscreenRange = 0.5f;
         const float BgmFade = 1f;
 
-        static SoundCatalog Catalog => CatalogStore.Get<SoundCatalog>();
+        SoundCatalog catalog;
 
         AudioMixer mixer;
         AudioMixerGroup sfxGroup;
@@ -29,13 +29,14 @@ namespace FireFlower
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void ResetStatics() => Instance = null;
 
-        public static void Create()
+        public static void Create(SoundCatalog catalog)
         {
             if (Instance != null) return;
 
             var go = new GameObject(nameof(SoundManager));
             DontDestroyOnLoad(go);
             Instance = go.AddComponent<SoundManager>();
+            Instance.catalog = catalog;
         }
 
         void Awake()
@@ -61,7 +62,7 @@ namespace FireFlower
         #region SFX
         public SoundVoice Play(string key, Vector3? position = null)
         {
-            SoundItem item = Catalog.Get(key);
+            SoundItem item = catalog != null ? catalog.Get(key) : null;
             AudioClip clip = item != null ? item.PickClip() : null;
             if (clip == null) return null;
 
@@ -93,7 +94,7 @@ namespace FireFlower
         {
             if (key == bgmKey) return;
 
-            SoundItem item = Catalog.Get(key);
+            SoundItem item = catalog != null ? catalog.Get(key) : null;
             AudioClip clip = item != null ? item.PickClip() : null;
             if (clip == null) return;
 

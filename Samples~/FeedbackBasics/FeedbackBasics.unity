@@ -149,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af82f99c1b9aad468cba9922b169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: FireFlower.Samples.FeedbackBasics::FireFlower.Samples.FeedbackSampleBooter
-  particles: {fileID: 11400000, guid: 0067eea1c2ce6f54683dcabf64647f60, type: 2}
 --- !u!114 &733745425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: FireFlower.Feedback::FireFlower.VFXManager
   bootOrder: 0
+  catalog: {fileID: 11400000, guid: 0067eea1c2ce6f54683dcabf64647f60, type: 2}
   flashMaterial: {fileID: 0}
   flashDuration: 0.05
   damagePrefab: {fileID: 0}

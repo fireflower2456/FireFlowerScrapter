@@ -7,11 +7,8 @@ Blocks think like C#: variables, `if`, loops, `await`-style waits, events, funct
 ## Install
 
 1. Unity **6000.3** or newer.
-2. Install these two first (Package Manager ▸ **+** ▸ *Install package from git URL…*):
-   - NaughtyAttributes — `https://github.com/dbrizov/NaughtyAttributes.git#upm`
-   - SerializeReferenceExtensions — `https://github.com/mackysoft/Unity-SerializeReferenceExtensions.git?path=Assets/MackySoft/MackySoft.SerializeReferenceExtensions`
-3. Install this package: Package Manager ▸ **+** ▸ *Install package from disk…* ▸ pick this folder's `package.json` (or *from git URL* if it is hosted).
-   Unity dependencies (Addressables, Localization, Input System, URP, Cinemachine, uGUI) come in automatically.
+2. Install this package: Package Manager ▸ **+** ▸ *Install package from git URL…* ▸ `https://github.com/fireflower2456/FireFlowerScrapter.git` (add `#v0.4.0` to pin a version).
+   Unity dependencies (Localization, Input System, Core RP, Cinemachine, uGUI) come in automatically.
 
 ## Quick start
 
@@ -57,7 +54,7 @@ public class Trap : MonoBehaviour
 | `FireFlower.Gameplay` | Optional modules on top: a mob framework (`Entity/`), a state controller (`Composable/`), and feedback blocks (`Blocks/`: particles, BGM, feedback tables). |
 | `FireFlower.Scrapter.Editor` | The Scraper window, the base `ScrapterWindow` for your own editors, block field drawers. |
 | `FireFlower.Feedback` | Feedback tables, particles, sound, VFX. |
-| `FireFlower.Catalog` (+Editor) | Addressables catalogs. |
+| `FireFlower.Catalog` (+Editor) | Catalogs: ScriptableObject lists looked up by id or key. Assign them where they are used (e.g. `VFXManager.catalog`). |
 | `FireFlower.Stat` / `Core` / `UI` | Stat sheet, dev console, time, pooling, UI helpers. |
 
 ## Documentation

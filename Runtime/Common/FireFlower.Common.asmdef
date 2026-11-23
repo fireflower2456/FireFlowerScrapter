@@ -1,0 +1,6 @@
+{
+    "name": "FireFlower.Common",
+    "rootNamespace": "FireFlower",
+    "references": [],
+    "autoReferenced": true
+}

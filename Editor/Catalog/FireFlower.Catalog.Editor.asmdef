@@ -3,8 +3,6 @@
     "rootNamespace": "FireFlower",
     "references": [
         "FireFlower.Catalog",
-        "NaughtyAttributes.Core",
-        "NaughtyAttributes.Editor",
         "Unity.Localization",
         "Unity.Localization.Editor"
     ],

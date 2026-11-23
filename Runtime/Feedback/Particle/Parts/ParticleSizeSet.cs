@@ -1,17 +1,13 @@
-﻿using NaughtyAttributes;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace FireFlower
 {
     public class ParticleSizeSet : ParticleBase
     {
         [SerializeField, Tooltip("If off, uses the prefab's original size regardless of target size")] bool fitTarget = true;
-        [ShowIf(nameof(fitTarget))]
         [SerializeField] float multiplier = 1.5f;
         [SerializeField] bool scaleByDamage;
-        [ShowIf(nameof(scaleByDamage))]
         [SerializeField, Tooltip("Maps this damage range onto the scale range below. Clamped outside the range")] Vector2 damageRange = new(0f, 50f);
-        [ShowIf(nameof(scaleByDamage))]
         [SerializeField] Vector2 scaleRange = new(0.8f, 1.5f);
 
         SpriteRenderer sr;

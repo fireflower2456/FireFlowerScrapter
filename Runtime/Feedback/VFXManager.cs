@@ -11,8 +11,7 @@ namespace FireFlower
 {
     public class VFXManager : ManagerBase<VFXManager>
     {
-        ParticleCatalog Catalog => CatalogStore.Get<ParticleCatalog>();
-
+        [SerializeField] ParticleCatalog catalog;
         [SerializeField] Material flashMaterial;
         [SerializeField, Min(0f)] float flashDuration = 0.05f;
         [SerializeField] DamageParticle damagePrefab;
@@ -34,11 +33,6 @@ namespace FireFlower
             AfterimageSpawner.Tick(Time.deltaTime);
         }
 
-        void LateUpdate()
-        {
-            RGBSplit.Apply();
-        }
-
         void OnDisable()
         {
             AfterimageSpawner.Clear();
@@ -54,7 +48,7 @@ namespace FireFlower
         public ParticleCore PlayParticle(string key, Vector3 position, Transform parents = null,
             GameObject target = null, Vector2 direction = default, float amount = 1f)
         {
-            ParticleItem item = Catalog.Get(key);
+            ParticleItem item = catalog != null ? catalog.Get(key) : null;
             if (item == null) return null;
 
             Quaternion rotation = direction == Vector2.zero

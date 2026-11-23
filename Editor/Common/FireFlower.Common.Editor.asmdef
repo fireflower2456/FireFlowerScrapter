@@ -1,0 +1,11 @@
+{
+    "name": "FireFlower.Common.Editor",
+    "rootNamespace": "FireFlower",
+    "references": [
+        "FireFlower.Common"
+    ],
+    "autoReferenced": true,
+    "includePlatforms": [
+        "Editor"
+    ]
+}

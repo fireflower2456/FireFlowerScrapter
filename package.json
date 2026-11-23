@@ -1,6 +1,6 @@
 {
   "name": "com.fireflower.scrapter",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "displayName": "FireFlowerScrapter",
   "description": "A Scratch-style block editor for Unity (the Scraper window) and its runtime: build behaviour out of blocks, save it as a ScrapAsset, and run it on any GameObject with ScrapPlayer. Includes optional feedback, catalog, stat and mob modules. See Documentation~/Guide.md.",
   "unity": "6000.3",
@@ -8,11 +8,10 @@
     "name": "FireFlower"
   },
   "dependencies": {
-    "com.unity.addressables": "2.9.1",
     "com.unity.cinemachine": "3.1.6",
     "com.unity.inputsystem": "1.18.0",
     "com.unity.localization": "1.5.13",
-    "com.unity.render-pipelines.universal": "17.3.0",
+    "com.unity.render-pipelines.core": "17.3.0",
     "com.unity.ugui": "2.0.0"
   },
   "samples": [

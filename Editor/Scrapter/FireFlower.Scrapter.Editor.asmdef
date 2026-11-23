@@ -9,9 +9,7 @@
         "FireFlower.Stat",
         "FireFlower.Catalog",
         "FireFlower.Catalog.Editor",
-        "MackySoft.SerializeReferenceExtensions",
-        "NaughtyAttributes.Core",
-        "NaughtyAttributes.Editor",
+        "FireFlower.Common",
         "Unity.Localization",
         "Unity.Localization.Editor",
         "Unity.TextMeshPro"

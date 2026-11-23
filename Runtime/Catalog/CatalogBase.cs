@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using NaughtyAttributes;
 using UnityEngine;
 
 namespace FireFlower
@@ -17,7 +16,7 @@ namespace FireFlower
     /// <summary>
     /// Expandable with an [ID] name header. Drawer: CatalogEntryDrawer.
     /// </summary>
-    public class CatalogEntryAttribute : ExpandableAttribute
+    public class CatalogEntryAttribute : PropertyAttribute
     {
     }
 
@@ -29,8 +28,7 @@ namespace FireFlower
         where T : class
     {
         //CatalogEntry — shown in the Inspector with an [ID] name header and edited in place when expanded
-        //OnValueChanged — touching the list sorts it by ID immediately
-        [SerializeField, CatalogEntry, OnValueChanged(nameof(SortItems))]
+        [SerializeField, CatalogEntry]
         protected List<T> items = new();
 
         protected virtual bool UseId => true;
@@ -95,8 +93,10 @@ namespace FireFlower
             return item is IKeyedCatalogItem byKey ? byKey.Key : null;
         }
 
+        // Touching the list in the Inspector keeps it sorted by the index key
         protected virtual void OnValidate()
         {
+            SortItems();
             Refresh();
         }
         protected virtual void Awake()

@@ -3,7 +3,7 @@
     "rootNamespace": "FireFlower",
     "references": [
         "FireFlower.Stat",
-        "MackySoft.SerializeReferenceExtensions"
+        "FireFlower.Common"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
